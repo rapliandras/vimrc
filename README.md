@@ -1,4 +1,4 @@
-# vimrc
+# the most awesome .vimrc
 
 I currently set up my dev environment to contain tools for PHP,
 Python, HTML, CSS, JavaScript and SQL development.
