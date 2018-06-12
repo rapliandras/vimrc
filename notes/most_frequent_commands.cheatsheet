@@ -1,0 +1,76 @@
+basic navigation
+
+    hjkl: left, down, up, right
+    gg G: top, bottoom
+    M: middle,
+    L: first col of last row
+    w: next word
+    b: prev word
+    a: append (move one character right and enter insert mode)
+    A: append to the end of line (and enter insert mode)
+    $: end of line
+    0: start of line
+    ^: start of line after whitespaces
+    /: finds string in current buffer
+
+selection
+    K: expand selection (vim-expand plugin)
+    J: unexpand selection (vim-expand plugin)
+    vi}i}: select inner block surrounded by },],) accordingly
+    vi}: select block if cursor is at the block start
+
+text operations
+    J: join lines
+    ~: switch case of char/selection
+    d: (normal mode) delete followed by
+        w: word
+        iw: inner word
+        basically every movement operator works here
+    d: (visual mode) deletes currently selected string
+    p: (normal mode) pastes yanked text
+    y: yanks text (copies to text register)
+        yy: yanks line
+        can be combined with movement operators and also works with visual selection
+    ciw: diw + enters insert mode
+
+registers
+    "+ clipboard (if compiled with the right flag or vim-gnome used)
+    "* selection register (middle mouse button, autofill)
+    "" unnamed register for every junk incl. x, d{movement}
+    "0 yank register for previously yanked text
+    "a to "z own registers
+    "A to "Z append to own registers
+    "a{somethig} insert to register
+    "ap paste register contents
+    "= expression register
+    "=3*3<CR>p pastes 9
+    <C-r>"a paster contents of register a in insert mode
+    
+read-only registers
+    "/ last search
+    ": last command
+    "% current filename
+    ". last inserted text
+    "# alternate filename
+    
+project navigation
+    :e FILENAME to edit a file (overwrites current buffer)
+    :tabe FILENAME opens file in a new tab (vim7)
+    :Aq NEEDLE finds needle in descending directories and opens it in current buffer (silversearch+fzf+fzm.vim plugin)
+    :NERDTreeToggle opens/closes the NERDTree interface in current window
+    Ctrl+WW to switch between windows
+    :vsplit FILENAME opens a vertically split window
+    :hsplit FILENAME opens a horizontally split window
+    vsp: alias for :vsplit, copies the same buffer
+    sp: alias for :hsplit, copies the same buffer
+
+
+tools
+    pcf: codestyle fix according to PSR
+
+other
+    :Song search song by name on spotify
+    :Artist search songs by artist on spotify
+
+auto commands:
+    :w lints the file and runs php cs-fix before writing out the buffer
