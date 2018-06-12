@@ -7,7 +7,7 @@ Code linting, auto completion, testing, debugging.
 Also configs for some unexpectedly cool stuff like my spotify plugin for vim (will be uploaded soon), etc.
 
 I know, this is very specific to everyone,
-but if you have a suggestion to further improve this - if you notice someone I missed and suggest using,
+but if you have a suggestion to further improve this - if you notice something I missed and suggest using,
 please do a PR or something :)
 
 Any questions?
